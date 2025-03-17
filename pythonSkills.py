@@ -13,12 +13,12 @@ class CreateList():
         prefix_sums = [sum(self.data)]
         suffix_sums = [sum(self.data)]
         
-        # Max aum value from left to right
+        # Maximum value from left to right
         for _ in range(len(self.data)-1):
             data_copy.pop(-1)
             prefix_sums.append(sum(data_copy))        
         
-        # Max aum value from right to left
+        # Maximum value from right to left
         for _ in range(len(self.data)-1):
             data_copy_reversed.pop(-1)
             suffix_sums.append(sum(data_copy_reversed))
